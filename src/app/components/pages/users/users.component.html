@@ -6,8 +6,8 @@
       <th>Detail</th>
     </tr>
     </thead>
-    <tbody *ngFor="let user of users | async">
-    <tr>
+    <tbody >
+    <tr *ngFor="let user of users | async">
       <td>{{user.name}}</td>
       <td>
         <button (click)="navigateToUserDetails(user.id)">Details</button>

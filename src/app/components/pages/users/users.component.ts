@@ -17,15 +17,12 @@ export class UsersComponent implements OnInit{
   }
   ngOnInit() {
     this._usersService.getUsers().pipe(
-      tap(res => {
-        this.users.next(res)
-        console.log(res)
-      })
+      tap((res) => this.users.next(res))
     ).subscribe()
   }
 
   navigateToUserDetails(id: number): void {
-    this._router.navigateByUrl(`/userDetails/${id}`)
+    this._router.navigateByUrl(`/users/${id}`).then()
   }
 
 }
