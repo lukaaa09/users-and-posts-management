@@ -1,0 +1,18 @@
+<div class="main-container">
+  <table>
+    <thead>
+    <tr>
+      <th>Name</th>
+      <th>Detail</th>
+    </tr>
+    </thead>
+    <tbody *ngFor="let user of users | async">
+    <tr>
+      <td>{{user.name}}</td>
+      <td>
+        <button (click)="navigateToUserDetails(user.id)">Details</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
