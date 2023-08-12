@@ -1,1 +1,37 @@
-<button (click)="navigateToPosts()">Posts</button>
+<div class="main-container">
+  <div class="container"  *ngIf="(user | async) as user">
+    <div class="profile">
+      <span class="char">{{user.username}}</span>
+      <span class="name">{{user.name}}</span>
+      <div class="line"></div>
+     <span class="web">Website: <a >{{user.website}}</a></span>
+    </div>
+    <div class="content">
+      <span class="info">INFORMATION</span>
+      <div class="line"></div>
+      <div class="details">
+        <div class="email">
+          <span class="mail">Email:</span>
+          <span class="val">{{user.email}}</span>
+        </div>
+        <div class="phone">
+          <span class="phone">Phone:</span>
+          <span class="val">{{user.phone}}</span>
+        </div>
+      </div>
+      <span class="info">Address</span>
+      <div class="line"></div>
+      <div class="details">
+        <div class="email">
+          <span class="mail">city:</span>
+          <span class="val">{{user.address.city}}</span>
+        </div>
+        <div class="phone">
+          <span class="phone">street:</span>
+          <span class="val">{{user.address.street}}</span>
+        </div>
+      </div>
+      <button (click)="navigateToPosts()">See User's Posts</button>
+    </div>
+  </div>
+</div>

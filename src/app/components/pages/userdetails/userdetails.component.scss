@@ -1,0 +1,142 @@
+.main-container {
+
+  max-width: 900px;
+  width: 100%;
+  border: 3px solid #0fb9ee;
+  padding: 30px;
+  margin: 75px auto;
+
+  .container {
+    //width: 50%;
+    display: flex;
+  }
+
+  .profile{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    //height: 300px;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 2%, rgba(59,65,170,1) 35%, rgba(0,212,255,1) 100%);
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+    padding: 40px 25px;
+
+   .char{
+     padding: 35px 50px;
+     background-color: #3a7aee;
+     border-radius: 50%;
+     border: 1px solid white;
+     color: white;
+     font-size: 30px;
+     font-weight: 500;
+     margin-bottom: 20px;
+     margin-top: 20px;
+   }
+
+    .name{
+      color: white;
+      font-size: 25px;
+      margin-bottom: 25px;
+    }
+
+    .line{
+      height: 2px;
+      width: 160px;
+      background-color: red;
+      margin-bottom: 25px;
+    }
+
+    .web{
+      font-size: 24px;
+      color: #ff0000;
+
+      a{
+        color:  #30ff00;
+      }
+    }
+  }
+
+  .content{
+    display: flex;
+    background-color: #fdf9f9;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 40px;
+    box-shadow: 9px -2px 18px 0px rgba(86,22,252,0.75);
+    -webkit-box-shadow: 9px -2px 18px 0px rgba(86,22,252,0.75);
+    -moz-box-shadow: 9px -2px 18px 0px rgba(86,22,252,0.75);
+
+    .info {
+      color: #49496f;
+      font-size: 25px;
+      letter-spacing: 5px;
+      font-family: Academic-Times;
+      margin-bottom: 5px;
+    }
+
+    .line{
+      width: 335px;
+      height: 2px;
+      background-color: darkgray;
+      margin-bottom: 20px;
+    }
+
+    .details{
+      display: flex;
+      gap: 25px;
+      margin-bottom: 15px;
+
+      .email{
+        display: flex;
+        flex-direction: column;
+
+        .mail{
+          color: #49496f;
+          font-size: 22px;
+          font-family: Academic-Times;
+        }
+
+        .val{
+          color: gray;
+          font-family: Academic-Times;
+
+        }
+      }
+
+
+      .phone{
+        display: flex;
+        flex-direction: column;
+
+        .phone{
+          color: #49496f;
+          font-size: 22px;
+          font-family: Academic-Times;
+        }
+
+        .val{
+          color: gray;
+          font-family: Academic-Times;
+
+        }
+      }
+    }
+    button {
+      padding: 10px 17px;
+      background: rgb(2,0,36);
+      background: linear-gradient(90deg, rgba(2,0,36,1) 2%, rgba(59,65,170,1) 35%, rgba(0,212,255,1) 100%);
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      //transition: background 0.3s ease-in-out;
+      font-size: 16px;
+
+      //&:hover{
+      // background: yellow;
+      //}
+    }
+  }
+
+}
