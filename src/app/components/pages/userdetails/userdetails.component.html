@@ -2,7 +2,7 @@
   <div class="main-container">
     <div class="container"  *ngIf="(user | async) as user">
       <div class="profile">
-        <span class="char">{{user.username}}</span>
+        <span class="char"><span>Username:</span> {{user.username}}</span>
         <span class="name">{{user.name}}</span>
         <div class="line"></div>
         <span class="web">Website: <a >{{user.website}}</a></span>
@@ -22,7 +22,7 @@
         </div>
         <span class="info">Address</span>
         <div class="line"></div>
-        <div class="details">
+        <div class="details" *ngIf="user.address">
           <div class="email">
             <span class="mail">city:</span>
             <span class="val">{{user.address.city}}</span>
