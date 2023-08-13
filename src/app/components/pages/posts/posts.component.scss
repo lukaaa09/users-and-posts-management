@@ -1,3 +1,5 @@
+@use "./src/assets/variable" as var;
+
 .main-container{
   display: flex;
   justify-content: center;
@@ -9,12 +11,13 @@
   margin-top: 29px;
 
   .content{
-    background-color: #4158D0;
+    background-color: var.$violent;
     background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
     width: 300px;
     height: 370px;
     border-radius: 10px;
     transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
 
     &:hover {
       transform: scale(1.05);
@@ -43,10 +46,10 @@
     }
     .number{
       padding: 35px 50px;
-      background-color: #d91d8d;
+      background-color: var.$light-pink;
       border-radius: 50%;
-      border: 1px solid white;
-      color: white;
+      border: 1px solid var.$primary-white;
+      color: var.$primary-white;
       font-size: 30px;
       font-weight: 500;
       margin-bottom: 20px;
@@ -54,16 +57,33 @@
     }
 
     .title{
-      color: white;
-      font-family: Academic-Times;
+      color: var.$primary-white;
+      font-family: var.$primary-font;
       font-size: 20px;
       margin-bottom: 10px;
     }
 
     .body{
-      color: burlywood;
+      color: var.$gold;
       font-size: 17px;
-      font-family: Academic-Times;
+      font-family: var.$primary-font;
     }
   }
 }
+.user-icon::before {
+  content: '';
+  display: block;
+  width: 30px;
+  height: 30px;
+  background-color: var.$light-pink;
+  border-radius: 50%;
+  border: 1px solid var.$primary-white;
+  color: var.$primary-white;
+  text-align: center;
+  line-height: 30px;
+  font-size: 20px;
+  position: absolute;
+  top: -15px;
+  left: 15px;
+}
+
